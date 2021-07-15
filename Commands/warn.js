@@ -24,6 +24,12 @@ module.exports.run = async (client, message, args) => {
         warns: 0
     };
 
+    warns[warnUser.id].warns++;
+
+    fs.writeFile("./warnings.json", JSON.stringify(warns), (err) => {
+        if (err) console.log(err);
+    });
+
 }
 
 module.exports.help = {
