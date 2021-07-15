@@ -1,0 +1,42 @@
+//Command start
+        const discord = require("discord.js");
+
+        module.exports.run = async(client, message, args) =>{
+
+            {code}
+
+        }
+
+        module.exports.help = {
+            name: "{name}"
+        }
+//Embed 
+
+
+    var {embedNaam} = new discord.MessageEmbed()
+
+        .setThumbnail(client.user.displayAvatarURL())
+        .setFooter("Ferre Games©", client.user.displayAvatarURL())
+        .setTimestamp()
+        .setColor("#0000ff")
+
+    return message.channel.send(embedNaam);
+//Command & Embed
+        const discord = require("discord.js");
+
+        module.exports.run = async(client, message, args) =>{
+
+             var {embedNaam} = new discord.MessageEmbed()
+
+                .setThumbnail(client.user.displayAvatarURL())
+                .setFooter("Ferre Games©", client.user.displayAvatarURL())
+                .setTimestamp()
+                .setColor("#0000ff")
+
+            return message.channel.send(embedNaam);
+
+        }
+
+        module.exports.help = {
+            name: "{name}"
+        }
