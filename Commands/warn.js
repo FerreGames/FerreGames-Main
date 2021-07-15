@@ -26,12 +26,6 @@ module.exports.run = async (client, message, args) => {
 
     warns[warnUser.id].warns++;
 
-    if (!warns[warnUser.id]) warns[warnUser.id] = {
-        warns: 0
-    };
-
-    warns[warnUser.id].warns++;
-
     fs.writeFile("./warnings.json", JSON.stringify(warns), (err) => {
         if (err) console.log(err);
     });
@@ -45,7 +39,7 @@ module.exports.run = async (client, message, args) => {
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
 
-    var channel = message.member.guild.channels.cache.get("865182769692147733");
+    var channel = message.member.guild.channels.cache.get("865197848101388288");
 
     if (!channel) return;
 
