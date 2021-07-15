@@ -51,6 +51,23 @@ module.exports.run = async (client, message, args) => {
 
     channel.send(embed);
 
+    var embedDM = new discord.MessageEmbed()
+
+        .setTitle(`Warned`)
+        .setDescription(`You have just been warned, find all the info about your warning here`)
+        .addFields(
+            { name: 'Warned by:', value: `${message.author}` },
+            { name: 'Warned user:', value: `${warnUser}` },
+            { name: 'Warn reason:', value: `${reason}` },
+            { name: 'Warns:', value: `${warns[warnUser.id].warns}` },
+        )
+        .setThumbnail(client.user.displayAvatarURL())
+        .setFooter("Ferre Games©", client.user.displayAvatarURL())
+        .setTimestamp()
+        .setColor("#00bcff")
+
+    message.user.send(embedDM);
+
 }
 
 module.exports.help = {
