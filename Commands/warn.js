@@ -26,28 +26,30 @@ module.exports.run = async (client, message, args) => {
 
     warns[warnUser.id].warns++;
 
+    if (!warns[warnUser.id]) warns[warnUser.id] = {
+        warns: 0
+    };
+
+    warns[warnUser.id].warns++;
+
     fs.writeFile("./warnings.json", JSON.stringify(warns), (err) => {
         if (err) console.log(err);
     });
 
     var embed = new discord.MessageEmbed()
-
-        .setTitle("Warned")
-        // .setDescription(``)
-        .setThumbnail(client.user.displayAvatarURL())
-        .setFooter("Ferre Games©", client.user.displayAvatarURL())
+        .setColor("#ff0000")
+        .setFooter(message.member.displayName, message.author.displayAvatarURL)
         .setTimestamp()
-        .setColor("#0000ff")
         .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
         **Warning door:** ${message.author}
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
-    
+
     var channel = message.member.guild.channels.cache.get("865182769692147733");
 
-    if(!channel) return;
+    if (!channel) return;
 
-    channel.send(embed)
+    channel.send(embed);
 
 }
 
