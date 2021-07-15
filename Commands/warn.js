@@ -66,7 +66,7 @@ module.exports.run = async (client, message, args) => {
         .setTimestamp()
         .setColor("#00bcff")
 
-    message.user.send(embedDM);
+    message.user.dm(embedDM);
 
 }
 
