@@ -18,6 +18,8 @@ module.exports.run = async(client, message, args) =>{
 
     if (warnUser.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't warn a Moderator");
 
+    
+
 }
 
 module.exports.help = {
