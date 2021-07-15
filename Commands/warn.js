@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
         if (err) console.log(err);
     });
 
-        var embed = new discord.MessageEmbed()
+    var embed = new discord.MessageEmbed()
 
         .setTitle("Warned")
         // .setDescription(``)
@@ -42,6 +42,12 @@ module.exports.run = async (client, message, args) => {
         **Warning door:** ${message.author}
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
+    
+    var channel = message.member.guild.channels.cache.get("865182769692147733");
+
+    if(!channel) return;
+
+    channel.send(embed)
 
 }
 
