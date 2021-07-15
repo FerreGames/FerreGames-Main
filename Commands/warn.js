@@ -31,13 +31,26 @@ module.exports.run = async (client, message, args) => {
     });
 
     var embed = new discord.MessageEmbed()
-        .setColor("#00bcff")
-        .setFooter(message.member.displayName, message.author.displayAvatarURL)
+
+        .setTitle(`Warned`)
+        .setDescription(`Here you can find all the info about this warn`)
+        .addFields(
+            { name: 'Warned by:', value: `${message.author}` },
+            { name: 'Warned user:', value: `${warnUser}` },
+            { name: 'Warn reason:', value: `${reason}` },
+            { name: 'Warns:', value: `${warns[warnUser.id].warns}` },
+        )
+        .setThumbnail(client.user.displayAvatarURL())
+        .setFooter("Ferre Games©", client.user.displayAvatarURL())
         .setTimestamp()
-        .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
-        **Warning door:** ${message.author}
-        **Redenen: ** ${reason}`)
-        .addField("Aantal warns", warns[warnUser.id].warns);
+        .setColor("#00bcff")
+        // .setColor("#00bcff")
+        // .setFooter(message.member.displayName, message.author.displayAvatarURL)
+        // .setTimestamp()
+        // .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
+        // **Warning door:** ${message.author}
+        // **Redenen: ** ${reason}`)
+        // .addField("Aantal warns", warns[warnUser.id].warns);
 
     var channel = message.member.guild.channels.cache.get("865197848101388288");
 
