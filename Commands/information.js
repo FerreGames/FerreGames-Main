@@ -2,6 +2,8 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
+    if (!message.member.hasPermission("ADMINISTARTOR")) return message.reply("Do you have the right perms");
+
     var infoEmbed = new discord.MessageEmbed()
 
         .setTitle(`Information | Ferre Games`)
