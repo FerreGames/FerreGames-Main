@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail(client.user.displayAvatarURL())
         .setFooter("Ferre Games©", client.user.displayAvatarURL())
         .setTimestamp()
-        .setColor("#0000ff")
+        .setColor("#00bcff")
 
     return message.channel.send(infoEmbed);
 

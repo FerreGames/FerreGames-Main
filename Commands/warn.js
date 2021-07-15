@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
     });
 
     var embed = new discord.MessageEmbed()
-        .setColor("#ff0000")
+        .setColor("#00bcff")
         .setFooter(message.member.displayName, message.author.displayAvatarURL)
         .setTimestamp()
         .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
