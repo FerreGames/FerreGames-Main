@@ -1,6 +1,8 @@
 const discord = require("discord.js");
+const fs = require("fs");
+const warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
-module.exports.run = async(client, message, args) =>{
+module.exports.run = async (client, message, args) => {
 
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Do you have the right perms");
 
@@ -18,7 +20,9 @@ module.exports.run = async(client, message, args) =>{
 
     if (warnUser.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't warn a Moderator");
 
-    
+    if (!warns[warnUser.id]) warns[warnUser.id] = {
+        warns: 0
+    };
 
 }
 
