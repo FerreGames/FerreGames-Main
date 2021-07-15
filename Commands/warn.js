@@ -30,6 +30,22 @@ module.exports.run = async (client, message, args) => {
         if (err) console.log(err);
     });
 
+        var embed = new discord.MessageEmbed()
+
+        .setTitle("Warned")
+        // .setDescription(``)
+        .setThumbnail(client.user.displayAvatarURL())
+        .setFooter("Ferre Games©", client.user.displayAvatarURL())
+        .setTimestamp()
+        .setColor("#0000ff")
+        // .setColor("#ff0000")
+        // .setFooter(message.member.displayName, message.author.displayAvatarURL)
+        .setTimestamp()
+        .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
+        **Warning door:** ${message.author}
+        **Redenen: ** ${reason}`)
+        .addField("Aantal warns", warns[warnUser.id].warns);
+
 }
 
 module.exports.help = {
