@@ -44,13 +44,6 @@ module.exports.run = async (client, message, args) => {
         .setFooter("Ferre Games©", client.user.displayAvatarURL())
         .setTimestamp()
         .setColor("#00bcff")
-        // .setColor("#00bcff")
-        // .setFooter(message.member.displayName, message.author.displayAvatarURL)
-        // .setTimestamp()
-        // .setDescription(`**Gewarnd:** ${warnUser} (${warnUser.id})
-        // **Warning door:** ${message.author}
-        // **Redenen: ** ${reason}`)
-        // .addField("Aantal warns", warns[warnUser.id].warns);
 
     var channel = message.member.guild.channels.cache.get("865197848101388288");
 
