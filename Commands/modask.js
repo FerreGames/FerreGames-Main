@@ -14,10 +14,10 @@ module.exports.run = async(client, message, args) =>{
         .setTimestamp()
         .setColor("#00bcff")
 
-    return message.channel.send(embedNaam);
+    return message.channel.send(embed);
 
 }
 
 module.exports.help = {
-    name: "embed"
+    name: "modask"
 }
