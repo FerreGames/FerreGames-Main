@@ -55,9 +55,9 @@ client.on("guildMemberAdd", member => {
     var joinEmbed = new discord.MessageEmbed()
 
         .setTitle(`New member has joined our discord`)
-        .setDescription(`${userTag} Welcome in the Official **Ferre Games** discord server, can we ask you to read the follow channel <#860811742920704010>.`)
+        .setDescription(`${userTag} Welcome in the Official **Fewy Farming** discord server, can we ask you to read the follow channel <#860811742920704010>.`)
         .setAuthor(`${user}`, `${userAvatar}`)
-        .setFooter("Ferre Games©", client.user.displayAvatarURL())
+        .setFooter("Fewy©", client.user.displayAvatarURL())
         .setTimestamp()
         .setColor("#0000ff")
 
@@ -78,9 +78,9 @@ client.on("guildMemberRemove", member => {
     var joinEmbed = new discord.MessageEmbed()
 
     .setTitle(`New member has joined our discord`)
-    .setDescription(`${userTag} Welcome in the Official **Ferre Games** discord server, can we ask you to read the follow channel <#860811742920704010>.`)
+    .setDescription(`${userTag} Welcome in the Official **Fewy Farming** discord server, can we ask you to read the follow channel <#860811742920704010>.`)
     .setAuthor(`${user}`, `${userAvatar}`)
-    .setFooter("Ferre Games©", client.user.displayAvatarURL())
+    .setFooter("Fewy©", client.user.displayAvatarURL())
     .setTimestamp()
     .setColor("#0000ff")
 
