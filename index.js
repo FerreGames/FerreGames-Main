@@ -32,7 +32,7 @@ client.login(process.env.token);
 client.on("ready", async () => {
 
     console.log(`${client.user.username} is online.`);
-    client.user.setActivity("Ferre Games", { type: "WATCHING" });
+    client.user.setActivity("Fewy Farming", { type: "WATCHING" });
 
 });
 
