@@ -31,7 +31,7 @@ client.on("guildMemberAdd", member => {
     var joinEmbed = new discord.MessageEmbed()
 
         .setTitle(`New member has joined our discord`)
-        .setDescription(`${userTag} Welcome in the Official **Fewy Farming** discord server, can we ask you to read the follow channel <#860811742920704010>.`)
+        .setDescription(`${userTag}, Welcome in the Official **Fewy Farming** discord server, can we ask you to read the follow channel <#860811742920704010>.`)
         .setAuthor(`${user}`, `${userAvatar}`)
         .setFooter("Fewy©", client.user.displayAvatarURL())
         .setTimestamp()
@@ -53,8 +53,8 @@ client.on("guildMemberRemove", member => {
 
     var joinEmbed = new discord.MessageEmbed()
 
-    .setTitle(`New member has joined our discord`)
-    .setDescription(`${userTag} Welcome in the Official **Fewy Farming** discord server, can we ask you to read the follow channel <#860811742920704010>.`)
+    .setTitle(`Old member has Leaved our discord`)
+    .setDescription(`${userTag}, Goodbye we hope you had a great time. And who knows, see you soon!`)
     .setAuthor(`${user}`, `${userAvatar}`)
     .setFooter("Fewy©", client.user.displayAvatarURL())
     .setTimestamp()
