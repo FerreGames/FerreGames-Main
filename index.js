@@ -64,9 +64,9 @@ client.on("guildMemberRemove", member => {
 
 });
 
-client.on("guildUpdate", channels => {
+client.on("guildUpdate", member => {
 
-    var channel = client.guild.channels.cache.get('910852549551214593');
+    var channel = member.guild.channels.cache.get('910852549551214593');
 
     if (!channel) console.log('Geen channel gevonden');
 
@@ -80,7 +80,7 @@ client.on("guildUpdate", channels => {
 
     channel.send(guildEmbed);
 
-})
+});
 
 client.on("message", async message => {
 
