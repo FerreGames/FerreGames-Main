@@ -64,6 +64,24 @@ client.on("guildMemberRemove", member => {
 
 });
 
+client.on("guildUpdate", member => {
+
+    var channel = member.guild.channels.cache.get('910852549551214593');
+
+    if (!channel) console.log('Geen channel gevonden');
+
+    var 
+
+    var guildEmbed = new discord.MessageEmbed()
+
+    .setTitle(`Server update`)
+    .setAuthor(`${user}`, `${userAvatar}`)
+    .setFooter("Fewy©", client.user.displayAvatarURL())
+    .setTimestamp()
+    .setColor("#0000ff")
+
+})
+
 client.on("message", async message => {
 
     if (message.author.bot) return;
