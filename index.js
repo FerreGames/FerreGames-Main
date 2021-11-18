@@ -64,7 +64,7 @@ client.on("guildMemberRemove", member => {
 
 });
 
-client.on("guildUpdate", guild => {
+client.on("guildUpdate", client => {
 
     var channel = client.guild.channels.cache.get('910852549551214593');
 
