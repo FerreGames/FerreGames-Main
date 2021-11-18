@@ -70,8 +70,6 @@ client.on("guildUpdate", member => {
 
     if (!channel) console.log('Geen channel gevonden');
 
-    var 
-
     var guildEmbed = new discord.MessageEmbed()
 
     .setTitle(`Server update`)
