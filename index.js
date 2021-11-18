@@ -80,6 +80,8 @@ client.on("guildUpdate", member => {
     .setTimestamp()
     .setColor("#0000ff")
 
+    channel.send(guildEmbed);
+
 })
 
 client.on("message", async message => {
