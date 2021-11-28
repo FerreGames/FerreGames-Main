@@ -78,4 +78,8 @@ client.on("message", async message => {
 
     var args = messageArray.slice(1);
 
+    var commands = client.commands.get(commands.slice(prefix.length));
+    
+    if (commands) commands.run(client, message, args);
+
 });
