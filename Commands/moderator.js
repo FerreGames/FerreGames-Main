@@ -6,7 +6,6 @@ module.exports.run = async (client, message, args) => {
 
     .setTitle(`Moderator Application | Fewy`)
     .setDescription(`Hello, this message explains very briefly what exactly we expect from you as a moderator, if you meet those requirements you can fill out the message format.`)
-    .setAuthor(`${user}`, `${userAvatar}`)
     .setFooter("Fewy©", client.user.displayAvatarURL())
     .setTimestamp()
     .setColor("#0000ff")
