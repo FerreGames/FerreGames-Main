@@ -77,7 +77,5 @@ client.on("message", async message => {
     var commands = messageArray[0];
 
     var args = messageArray.slice(1);
-    
-    if (commands) commands.run(client, message, args);
 
 });
