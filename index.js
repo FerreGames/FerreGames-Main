@@ -35,7 +35,7 @@ client.on("guildMemberAdd", member => {
         .setAuthor(`${user}`, `${userAvatar}`)
         .setFooter("Fewy©", client.user.displayAvatarURL())
         .setTimestamp()
-        .setColor("#0000ff")
+        .setColor("#00bbff")
 
     channel.send(joinEmbed);
 
@@ -58,7 +58,7 @@ client.on("guildMemberRemove", member => {
     .setAuthor(`${user}`, `${userAvatar}`)
     .setFooter("Fewy©", client.user.displayAvatarURL())
     .setTimestamp()
-    .setColor("#0000ff")
+    .setColor("#00bbff")
 
     channel.send(joinEmbed);
 
