@@ -53,7 +53,7 @@ client.on("guildMemberRemove", member => {
 
     var joinEmbed = new discord.MessageEmbed()
 
-    .setTitle(`Old member has Leaved our discord`)
+    .setTitle(`Old member has Left our discord`)
     .setDescription(`${userTag}, Goodbye we hope you had a great time. And who knows, see you soon!`)
     .setAuthor(`${user}`, `${userAvatar}`)
     .setFooter("Fewy©", client.user.displayAvatarURL())
